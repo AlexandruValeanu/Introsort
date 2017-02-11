@@ -25,4 +25,4 @@ Test cases used in testing and benchmarking:
  * 12 -> N = 5'000'000;   V = 2'000'000'000
  * 13 -> N = 10'000'000;  V = 2'000'000'000
 
-![](https://github.com/AlexandruValeanu/Algorithms-and-Data-Structures/blob/master/Introsort/charts/figure_1.png)
+![](https://github.com/AlexandruValeanu/Algorithms-and-Data-Structures/blob/master/Introsort/charts/figure_0.png)
