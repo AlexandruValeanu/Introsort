@@ -3,6 +3,9 @@ Highly efficient implementation of [introsort](https://en.wikipedia.org/wiki/Int
 Key attributes of this implementation:
 * 3-way partition 
 * sorting networks for 1 &le; N &le; 6
+* insertion sort for 7 &le; N &le; 25
+* Quicksort uses only one recursive call (the other one is transformed into tail recursion)
+* std::heap_sort if Quicksort degenerates
 
 
 Test cases used in testing and benchmarking:
