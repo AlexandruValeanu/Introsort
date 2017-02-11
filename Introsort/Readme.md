@@ -2,6 +2,8 @@ Highly efficient implementation of [introsort](https://en.wikipedia.org/wiki/Int
 
 Key attributes of this implementation:
 * 3-way partition 
+* sorting networks for 1 &le; N &le; 6
+
 
 Test cases used in testing and benchmarking:
  *  0 -> N = 100;          V = 100
