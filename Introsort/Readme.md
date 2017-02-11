@@ -3,6 +3,7 @@ Highly efficient implementation of [introsort](https://en.wikipedia.org/wiki/Int
 Key attributes of this implementation:
 * 3-way partition 
 
+Test cases used in testing and benchmarking:
  *  0 -> N = 100;          V = 100
  *  1 -> N = 1'000;        V = 500
  *  2 -> N = 10'000;       V = 2'000
@@ -10,7 +11,6 @@ Key attributes of this implementation:
  *  4 -> N = 1'000'000;    V = 40'000
  *  5 -> N = 5'000'000;    V = 80'000
  *  6 -> N = 10'000'000;   V = 125'000
- *
  *  7 -> N = 100;          V = 2'000'000'000
  *  8 -> N = 1'000;        V = 2'000'000'000
  *  9 -> N = 10'000;       V = 2'000'000'000
