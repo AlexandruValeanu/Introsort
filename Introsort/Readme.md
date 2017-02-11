@@ -2,6 +2,7 @@ Highly efficient implementation of [introsort](https://en.wikipedia.org/wiki/Int
 
 Key attributes of this implementation:
 * 3-way partition 
+* median of three (using 3 randomly chosen elements) for pivot selection
 * sorting networks for 1 &le; N &le; 6
 * insertion sort for 7 &le; N &le; 25
 * Quicksort uses only one recursive call (the other one is transformed into tail recursion)
