@@ -26,3 +26,9 @@ Test cases used in testing and benchmarking:
  * 13 -> N = 10'000'000;  V = 2'000'000'000
 
 ![](https://github.com/AlexandruValeanu/Algorithms-and-Data-Structures/blob/master/Introsort/charts/figure_0.png)
+![](https://github.com/AlexandruValeanu/Algorithms-and-Data-Structures/blob/master/Introsort/charts/figure_1.png)
+![](https://github.com/AlexandruValeanu/Algorithms-and-Data-Structures/blob/master/Introsort/charts/figure_2.png)
+![](https://github.com/AlexandruValeanu/Algorithms-and-Data-Structures/blob/master/Introsort/charts/figure_3.png)
+![](https://github.com/AlexandruValeanu/Algorithms-and-Data-Structures/blob/master/Introsort/charts/figure_4.png)
+![](https://github.com/AlexandruValeanu/Algorithms-and-Data-Structures/blob/master/Introsort/charts/figure_5.png)
+![](https://github.com/AlexandruValeanu/Algorithms-and-Data-Structures/blob/master/Introsort/charts/figure_6.png)
