@@ -5,7 +5,7 @@
 
 namespace introsort_implementation {
 
-#define sort_net2(x, y) if (comp(y, x)) std::swap(x, y)
+    #define sort_net2(x, y) if (comp(y, x)) std::swap(x, y)
 
     template<typename T, typename Comparator>
     void sort2(T &a, T &b, Comparator comp) {
@@ -57,36 +57,5 @@ namespace introsort_implementation {
         sort_net2(c, d);
     };
 }
-
-/*
-template <typename T, typename Comparator>
-void diff_swap3(T &x, T &y, T &z, Comparator comp){
-    if (comp(y, x)) {
-        if (comp(z, x)) {
-            if (comp(z, y)) {
-                std::swap(x, z);
-            } else {
-                T tmp = std::move(x);
-                x = std::move(y);
-                y = std::move(z);
-                z = std::move(tmp);
-            }
-        } else {
-            std::swap(x, y);
-        }
-    } else {
-        if (comp(z, y)) {
-            if (comp(z, x)) {
-                T tmp = std::move(z);
-                z = std::move(y);
-                y = std::move(x);
-                x = std::move(tmp);
-            } else {
-                std::swap(y, z);
-            }
-        }
-    }
-}
- */
 
 #endif //INTROSORT_SORTING_NETWORKS_H
