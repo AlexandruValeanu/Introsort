@@ -10,22 +10,20 @@ namespace introsort_implementation {
     template<typename RandomIterator, typename Comparator>
     bool insertion_sort(RandomIterator begin, RandomIterator end, Comparator comp,
                         const int MAX_DIST = std::numeric_limits<int>::max()) {
-        auto i = begin;
 
-        while (++i != end) {
-            const auto &tmp = *i;
-            auto j = i;
+        for (auto i = begin + 1; i < end; ++i){
+            auto x = std::move(*i);
+            decltype(i) j;
             int d = 0;
 
-            while (j != begin && comp(tmp, *(j - 1))) {
-                *j = *(j - 1);
-                --j;
+            for (j = i; j > begin && comp(x, *(j - 1)); j--){
+                *j = std::move(*(j - 1));
 
                 if (++d > MAX_DIST)
                     return false;
             }
 
-            *j = tmp;
+            *j = x;
         }
 
         return true;
