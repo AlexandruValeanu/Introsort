@@ -157,7 +157,20 @@ void gen_data(){
 }
 
 int main() {
-    gen_data();
+//    gen_data();
+
+    vector<int> v{0, 6, 7, 6, 0, 5, 5, 8, 8, 5, 0, 6, 3, 7, 2, 3, 0, 5,
+                  3, 5, 2, 7, 8, 9, 6, 8, 1, 6, 3, 4, 2, 4, 0, 9, 6, 1, 3, 3, 8, 5,1,2,1,5,7,1,0,9,8,3,4};
+
+    introsort(v.begin(), v.end());
+
+    cout << v.size() << endl;
+
+    for (auto x: v)
+        cout << x << " ";
+    cout << endl;
+
+    assert(is_sorted(v.begin(), v.end()));
 
     return 0;
 }
