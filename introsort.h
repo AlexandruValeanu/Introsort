@@ -130,11 +130,7 @@ namespace introsort_implementation {
 
     template<typename RandomIterator>
     unsigned find_maximal_depth(RandomIterator low, RandomIterator high) {
-        unsigned lg2 = 0;
-
-        for (auto d = high - low + 1; d != 0; d >>= 1, ++lg2);
-
-        return lg2 * 2;
+        return (sizeof(int) * __CHAR_BIT__  - 1 - __builtin_clz(high - low)) * 2;
     }
 
     template <typename RandomIterator>
