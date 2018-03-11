@@ -22,11 +22,13 @@ namespace introsort_implementation {
     choose_pivot(RandomIterator low, RandomIterator high, Comparator comp) {
         static std::random_device rd;
         static std::mt19937 mt(rd());
-        static std::uniform_int_distribution<int> distribution(0, high - low);
+        static std::uniform_int_distribution<> distribution(0, std::numeric_limits<int>::max());
 
-        typename std::iterator_traits<RandomIterator>::value_type x = *(low + distribution(mt));
-        typename std::iterator_traits<RandomIterator>::value_type y = *(low + distribution(mt));
-        typename std::iterator_traits<RandomIterator>::value_type z = *(low + distribution(mt));
+        const auto length = high - low + 1;
+
+        typename std::iterator_traits<RandomIterator>::value_type x = *(low + distribution(mt) % length);
+        typename std::iterator_traits<RandomIterator>::value_type y = *(low + distribution(mt) % length);
+        typename std::iterator_traits<RandomIterator>::value_type z = *(low + distribution(mt) % length);
 
         sort3(x, y, z, comp);
         return y;
@@ -57,7 +59,7 @@ namespace introsort_implementation {
     template<typename RandomIterator, typename Comparator>
     void impl_intro_sort(RandomIterator low, RandomIterator high, unsigned depth, Comparator comp) {
         while (low <= high) {
-            auto length = high - low + 1;
+            const auto length = high - low + 1;
 
             /* Trivial case */
             if (length <= 1)
